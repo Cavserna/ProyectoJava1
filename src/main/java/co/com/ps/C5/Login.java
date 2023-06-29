@@ -1,4 +1,4 @@
-package co.com.ps.C4;
+package co.com.ps.C5;
 import java.util.Scanner;
 public class Login {
     private static final String USERNAME = "Camilo";
@@ -13,6 +13,7 @@ public class Login {
         String password = scanner.nextLine();
         if (userName.equals(USERNAME) && password.equals(PASSWORD)){
             System.out.println("Usuario y contrasena correctas");
+            System.out.print(" Bienvenido: " + USERNAME) ;
         } else {
             int contador= 0;
             while (userName.equals(USERNAME)== false && password.equals(PASSWORD)== false){
@@ -23,6 +24,7 @@ public class Login {
                 password = scanner.nextLine();
                 contador++;
             }
+            System.out.print(" Bienvenido: " + USERNAME) ;
         }
     }
 }
