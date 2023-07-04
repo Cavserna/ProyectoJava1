@@ -11,42 +11,35 @@ public class ConversorUnidades {
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String opcion;
-        int op = 0;
+        int op;
 
         do {
+            System.out.println("");
             System.out.println("           ** Bienvenido **");
             System.out.println("             ------------");
             System.out.println("   ** Escriba la opción que desea **");
             System.out.println();
-            System.out.println(" * Termica (Celcius a Fahrenheit) ");
-            System.out.println(" * Distancia (Metros a Pies) ");
-            opcion = scanner.nextLine();
-            switch (opcion) {
-                case "Termica":
+            System.out.println(" 1. * Termica (Celcius a Fahrenheit) ");
+            System.out.println(" 2. * Distancia (Metros a Pies) ");
+            System.out.println(" 0. * Salir ");
+            op = scanner.nextInt();
+            switch (op) {
+                case 1:
                     System.out.println(" ** Celcius a Fahrenheit **");
                     System.out.println();
                     System.out.println(" * Ingrese los grados Celcius ");
                     int gradosC = scanner.nextInt();
                     convertirCaF(gradosC);
-                    System.out.println("");
-                    System.out.println("   ** Desea volver al inicio **");
-                    System.out.println("   ** Si n(No) **");
-                    op=scanner.nextInt();
                     break;
-                case "Distancia":
+                case 2:
                     System.out.println(" ** Metros a Pies **");
                     System.out.println();
                     System.out.println(" * Ingrese los metros");
                     int metro=scanner.nextInt();
                     convertirMaP(metro);
-                    System.out.println("");
-                    System.out.println("   ** Desea volver al inicio? **");
-                    System.out.println("        * 1(Si) 2(no) *");
-                    op=scanner.nextInt();
                     break;
             }
-        } while (op != 1);
+        } while (op != 0);
     }
 }
 
