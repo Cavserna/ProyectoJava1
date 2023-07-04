@@ -1,6 +1,6 @@
 package co.com.ps.C6;
 import java.util.Scanner;
-public class ConversorUnidades {
+public class ProyectoFiConversor {
     public static void convertirCaF (int gradosC){
         int fharenheit = ((gradosC * 9) / 5 + (32)) ;
         System.out.println("Los grados Fahrenheit son : " + fharenheit);
